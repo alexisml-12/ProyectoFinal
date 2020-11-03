@@ -7,15 +7,30 @@
     <title>Registro inquilino</title>
 </head>
 <body>
-<h1>Formulario de registro</h1>
+<div class="container">
+
+<nav class="navbar navbar-dark bg-primary">
+  <a class="navbar-brand">AD Conjuntos Residenciales</a>
+  <a class="navbar-link">Inicio</a>
+  <a class="navbar-link">Soporte</a>
+
+
+
+<button class="btn btn-light" type="submit">Salir</button>
+</nav>
+</div>
+
+
+
+
+
+
+
 <div class="container">
     <div class="row">
         <div class="col-md-4 mx-auto">
-
-        <?php if (!empty($message)): ?>
-            <p><?= $message ?></p>
-        <?php endif; ?>
-            <h2>Registrarse</h2>
+            <br>
+            <h2>Registrate</h2>
             <br>
             <form action="" method="POST">
                 <input type="text" name="cedula" placeholder="Cedula">
@@ -38,6 +53,8 @@
                 <input type="password" name="contraseña" placeholder="Contraseña">
                 <br><br>
                 <input type="submit" value="Registrarme">
+                <br>
+                <br>
             </form>
         </div>    
     </div>
