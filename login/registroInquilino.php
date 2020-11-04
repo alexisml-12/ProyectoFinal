@@ -7,41 +7,32 @@
     <title>Registro inquilino</title>
 </head>
 <body>
-<div class="container">
 
 <nav class="navbar navbar-dark bg-primary">
-  <a class="navbar-brand">AD Conjuntos Residenciales</a>
-  <a class="navbar-link">Inicio</a>
-  <a class="navbar-link">Soporte</a>
-
-
-
-<button class="btn btn-light" type="submit">Salir</button>
+  <a class="navbar-brand" href="">AD Conjuntos Residenciales</a>
+  <form class="form-inline">
+    <a class="navbar-brand" href="#">Soporte</a>
+    <a class="navbar-brand" href="#">Iniciar Sesion</a>
+  </form>
 </nav>
-</div>
-
-
-
-
-
 
 
 <div class="container">
     <div class="row">
         <div class="col-md-4 mx-auto">
             <br>
-            <h2>Registrate</h2>
+            <center><h2>Registrate</h2></center>
             <br>
             <form action="" method="POST">
-                <input type="text" name="cedula" placeholder="Cedula">
-                <br><br>
-                <input type="text" name="nombre" placeholder="Nombre/s">
-                <br><br>
-                <input type="text" name="apellido" placeholder="Apellido/s">
-                <br><br>
-                <input type="text" name="telefono" placeholder="Telefono">
-                <br><br>
-            <select class="custom-select custom-select-sm">
+                <input class="form-control" type="text" name="cedula" placeholder="Cedula">
+                <br>
+                <input class="form-control" type="text" name="nombre" placeholder="Nombre/s">
+                <br>
+                <input class="form-control" type="text" name="apellido" placeholder="Apellido/s">
+                <br>
+                <input class="form-control" type="text" name="telefono" placeholder="Telefono">
+                <br>
+            <select class="form-control">
                 <option selected>Número inquilinos</option>
                 <option value="0">1</option>
                 <option value="1">2</option>
@@ -49,11 +40,10 @@
                 <option value="3">4</option>
                 <option value="4">5</option>
             </select>
-                <br><br>
-                <input type="password" name="contraseña" placeholder="Contraseña">
-                <br><br>
-                <input type="submit" value="Registrarme">
                 <br>
+                <input class="form-control" type="password" name="contraseña" placeholder="Contraseña">
+                <br>
+                <center><input type="submit" class="btn btn-info" value="Registrarme"></center>
                 <br>
             </form>
         </div>    

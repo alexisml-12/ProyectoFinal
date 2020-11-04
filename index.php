@@ -7,8 +7,13 @@
     <title>Inicio</title>
 </head>
 <body>
-
-
+<nav class="navbar navbar-dark bg-primary">
+  <a class="navbar-brand" href="">AD Conjuntos Residenciales</a>
+  <a class="nav-link" href="#">Features</a>
+  <form class="form-inline">
+    <a class="navbar-brand" href="#">Iniciar Sesion</a>
+  </form>
+</nav>
 
 
 
