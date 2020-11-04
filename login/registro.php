@@ -22,7 +22,7 @@ if(isset($_POST['registrar'])){
            }
 
     }else{
-        echo "Porfavor completar todos los campos con * ";
+        echo "Porfavor completar todos los campos con *";
     }
 }
 /*$nombre = $_POST['nombre'];
