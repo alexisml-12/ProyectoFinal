@@ -47,7 +47,7 @@
                 </select>
                 <br>
                 <label for="usuario" class="sr-only">Usuario</label>
-                <input type="text" id="inputEmail" class="form-control" placeholder="Usuario" required autofocus>
+                <input type="text" id="usuario" class="form-control" placeholder="Usuario" required autofocus>
                 <label for="contrasena" class="sr-only">Password</label>
                 <input type="password" id="contrasena" class="form-control" placeholder="Contraseña" required>
                 <button class="btn btn-lg btn-success btn-block" type="submit">Ingresar</button>
