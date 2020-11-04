@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.css">
-    <title>Registro Propietario</title>
+    <title>Registro Portero</title>
 </head>
 <body>
 
@@ -21,16 +21,16 @@
     <div class="row">
         <div class="col-md-4 mx-auto">
             <br>
-            <center><h2>Registrate como Propietario</h2></center>
+            <center><h2>Registrate como Portero</h2></center>
             <br>
             <form action="" method="POST">
-                <input class="form-control" type="text" name="cedula" placeholder="Cedula">
-                <br>
                 <input class="form-control" type="text" name="nombre" placeholder="Nombre/s">
                 <br>
                 <input class="form-control" type="text" name="apellido" placeholder="Apellido/s">
                 <br>
                 <input class="form-control" type="text" name="telefono" placeholder="Telefono">
+                <br>
+                <input class="form-control" type="text" name="usuario" placeholder="Elige un nombre de usuario">
                 <br>
                 <input class="form-control" type="password" name="contraseña" placeholder="Contraseña">
                 <br>

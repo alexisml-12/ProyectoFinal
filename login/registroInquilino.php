@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col-md-4 mx-auto">
             <br>
-            <center><h2>Registrate</h2></center>
+            <center><h2>Registrate como Inquilino</h2></center>
             <br>
             <form action="" method="POST">
                 <input class="form-control" type="text" name="cedula" placeholder="Cedula">
