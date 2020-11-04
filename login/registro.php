@@ -15,9 +15,7 @@ if(isset($_POST['registrar'])){
                 ('$nombre','$apellido','$telefono','$usuario','$contraseña')";
            $resultado = mysqli_query($conn,$consulta);
            if($resultado){
-            <h1> class="alert alert-info" role="alert">
             echo "¡Te haz registrado satisfactoriamente";
-          </div>
 
            }else{
                echo "¡Ups, ha ocurrido un error!";
