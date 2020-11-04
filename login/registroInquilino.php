@@ -9,10 +9,10 @@
 <body>
 
 <nav class="navbar navbar-dark bg-primary">
-  <a class="navbar-brand" href="">AD Conjuntos Residenciales</a>
+  <a class="navbar-brand" href="../index.php">AD Conjuntos Residenciales</a>
   <form class="form-inline">
     <a class="navbar-brand" href="#">Soporte</a>
-    <a class="navbar-brand" href="#">Iniciar Sesion</a>
+    <a class="navbar-brand" href="../login/login.php">Iniciar Sesion</a>
   </form>
 </nav>
 

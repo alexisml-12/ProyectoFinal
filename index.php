@@ -13,7 +13,7 @@
         <a class="navbar-brand" href="#">Contacto</a>
         <a class="navbar-brand" href="#">Soporte</a>
         <form class="form-inline">
-            <a class="navbar-brand" href="#">Iniciar Sesion</a>
+            <a class="navbar-brand" href="login/login.php">Iniciar Sesion</a>
         </form>
     </nav>
 <div class="container">
