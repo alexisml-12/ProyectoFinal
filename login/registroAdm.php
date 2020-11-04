@@ -24,19 +24,22 @@
             <center><h2>Registrate como Administrador</h2></center>
             <br>
             <form action="" method="POST">
-                <input class="form-control" type="text" name="nombre" placeholder="Nombre/s">
+                <input class="form-control" type="text" name="nombre" placeholder="*Nombre/s">
                 <br>
-                <input class="form-control" type="text" name="apellido" placeholder="Apellido/s">
+                <input class="form-control" type="text" name="apellido" placeholder="*Apellido/s">
                 <br>
-                <input class="form-control" type="text" name="telefono" placeholder="Telefono">
+                <input class="form-control" type="text" name="telefono" placeholder="*Telefono">
                 <br>
-                <input class="form-control" type="text" name="usuario" placeholder="Elige un nombre de usuario">
+                <input class="form-control" type="text" name="usuario" placeholder="*Elige un nombre de usuario">
                 <br>
-                <input class="form-control" type="password" name="contraseña" placeholder="Contraseña">
+                <input class="form-control" type="password" name="contraseña" placeholder="*Contraseña">
                 <br>
-                <center><input type="submit" class="btn btn-info" value="Registrarme"></center>
+                <center><input type="submit" class="btn btn-info" name="registrar" value="Registrarme"></center>
                 <br>
             </form>
+            <?php
+            include("registro.php");
+            ?>
         </div>    
     </div>
 </div>

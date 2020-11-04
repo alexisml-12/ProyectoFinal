@@ -9,8 +9,8 @@ $conn = mysqli_connect (
     'db_proyectofinal'
 );
 
-// if (isset($conn)){
-//     echo 'esta conectada';
-// }
+ /*if (isset($conn)){
+    echo 'esta conectada';
+}*/
 
 ?>

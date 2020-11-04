@@ -24,16 +24,16 @@
             <center><h2>Registrate como Inquilino</h2></center>
             <br>
             <form action="" method="POST">
-                <input class="form-control" type="text" name="cedula" placeholder="Cedula">
+                <input class="form-control" type="text" name="cedula" placeholder="*Cedula">
                 <br>
-                <input class="form-control" type="text" name="nombre" placeholder="Nombre/s">
+                <input class="form-control" type="text" name="nombre" placeholder="*Nombre/s">
                 <br>
-                <input class="form-control" type="text" name="apellido" placeholder="Apellido/s">
+                <input class="form-control" type="text" name="apellido" placeholder="*Apellido/s">
                 <br>
-                <input class="form-control" type="text" name="telefono" placeholder="Telefono">
+                <input class="form-control" type="text" name="telefono" placeholder="*Telefono">
                 <br>
             <select class="form-control">
-                <option selected>Número inquilinos</option>
+                <option selected>*Número inquilinos</option>
                 <option value="0">1</option>
                 <option value="1">2</option>
                 <option value="2">3</option>
@@ -41,7 +41,7 @@
                 <option value="4">5</option>
             </select>
                 <br>
-                <input class="form-control" type="password" name="contraseña" placeholder="Contraseña">
+                <input class="form-control" type="password" name="contraseña" placeholder="*Contraseña">
                 <br>
                 <center><input type="submit" class="btn btn-info" value="Registrarme"></center>
                 <br>
