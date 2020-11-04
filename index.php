@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
     <title>Inicio</title>
+    <style type="text/css">
+    body{
+        background: url('includes/fondo2.jpg');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-color:rgba(0, 0, 0, 0.5);
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        z-index: 0;
+    }
+
+    div {
+        font-size: 36px;
+        color: white;
+    }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-dark bg-primary">
@@ -18,14 +38,15 @@
     </nav>
 <div class="container">
     <div style="background:transparent !important" class="jumbotron">
-        <center><h1>La mejor manera de administrar tu edificio</h1></center>
+    <br>
+    <br>
+        <center><h1 style="color:white;">La mejor manera de administrar tu edificio</h1></center>
         <br>
         <p class="lead">AD Conjuntos residenciales es una aplicacion desarrollada para brindar el mejor
         servicio para el manejo de informacion de unidades residenciales que tambien cuenta con una interfaz
         para los inquilinos, propietarios y trabajadores de la unidad.</p>
-        <br>
         <div class="text-center">
-            <img src="https://www.metrocuadrado.com/noticias/sites/default/files/styles/full_image/public/field/image/68678231_ml.jpg?itok=0ib6VkoJ" class="rounded">
+            <!-- <img src="https://www.metrocuadrado.com/noticias/sites/default/files/styles/full_image/public/field/image/68678231_ml.jpg?itok=0ib6VkoJ" class="rounded" alt="" width="960px"> -->
         </div>
     </div>
 </div> 
