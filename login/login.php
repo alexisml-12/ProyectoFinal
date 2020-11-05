@@ -6,9 +6,22 @@ require '../db.php';
 
 if (isset($_POST['ingresar'])) {
     $selec = $_POST['lista'];
-    if ($selec == 0) {
+    $usuario = $_POST['usuario'];
+    $clave = $_POST['contrasena'];
+    if ($selec == 'Seleccionar Usuario...') {
         $_SESSION['mensaje'] = 'Seleccione un rol';
         $_SESSION['tipo_mensaje'] = 'danger';
+    }elseif ($selec==0) {
+      $consulta= "SELECT * FROM administrador WHERE usuario='$usuario' AND contraseña='$clave'";
+      $query= mysqli_query($conn,$consulta);
+      $result = mysqli_num_rows($query);
+
+      if ($result) {
+        header("Location: ../index.php");
+      }else {
+        $_SESSION['mensaje'] = 'Usuario o contraseña incorrectos';
+        $_SESSION['tipo_mensaje'] = 'danger';
+      }
     }
     
 }
@@ -72,10 +85,10 @@ if (isset($_POST['ingresar'])) {
                     <option value="3">Inquilino</option>
                 </select>
                 <br>
-                <label for="usuario" class="sr-only">Usuario</label>
-                <input type="text" id="usuario" class="form-control" placeholder="Usuario" required autofocus>
+                <!-- <label for="usuario" class="sr-only">Usuario</label> -->
+                <input type="text" name="usuario" class="form-control" placeholder="Usuario" required autofocus>
                 <label for="contrasena" class="sr-only">Password</label>
-                <input type="password" id="contrasena" class="form-control" placeholder="Contraseña" required>
+                <input type="password" name="contrasena" class="form-control" placeholder="Contraseña" required>
                 <button class="btn btn-lg btn-primary btn-block" name="ingresar" type="submit">Ingresar</button>
                 <br>
                 <a href="../paso.php" class="btn btn-lg btn-success btn-block">Registrarme</a>

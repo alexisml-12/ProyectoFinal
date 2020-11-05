@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>Iniciar Sesion</title>
+    <title>Registro</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <nav class="navbar navbar-dark bg-dark" style="background-color: #e3f2fd;">

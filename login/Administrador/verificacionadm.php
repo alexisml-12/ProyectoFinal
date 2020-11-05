@@ -1,3 +1,21 @@
+
+<?php 
+
+require '../../db.php';
+
+if (isset($_POST['ingresarcod'])) {
+  $cod = $_POST['cod'];
+  if ($cod == 12345) {
+    header("Location: registroAdm.php");
+  }else {
+    $_SESSION['mensaje'] = 'Ingrese un codigo valido';
+    $_SESSION['tipo_mensaje'] = 'danger';
+  }
+  
+}
+
+?>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -5,9 +23,9 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>Iniciar Sesion</title>
+    <title>Registro Administrador</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <nav class="navbar navbar-dark bg-dark" style="background-color: #e3f2fd;">
         <a class="navbar-brand" href="../../index.php">AD Conjuntos Residenciales</a>
     </nav>
@@ -28,19 +46,26 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="../css/login.css" rel="stylesheet">
+    <link href="../../css/login.css" rel="stylesheet">
   </head>
   <br>
   <br>
   <br>  
     <body class="text-center">
         <div class="container">
-            <form action="login.php" method="POST" class="form-signin">
-                <h1 class="h3 mb-3 font-weight-normal">¿Como deseas registrarte?</h1>
-                <a href="login/registroAdm.php" class="btn btn-lg btn-danger btn-block">Administrador</a>
-                <a href="login/registroPortero.php" class="btn btn-lg btn-danger btn-block">Portero</a>
-                <a href="login/registroInquilino.php" class="btn btn-lg btn-danger btn-block">Inquilino</a>
-                <a href="login/registroPropietario.php" class="btn btn-lg btn-danger btn-block">Propietario</a>
+            <form action="verificacionadm.php" method="POST" class="form-signin">
+            <?php if(isset($_SESSION['mensaje'])){ ?>
+            <div class="alert alert-<?= $_SESSION['tipo_mensaje']; ?> alert-dismissible fade show" role="alert">
+                <?= $_SESSION['mensaje'] ?>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <?php session_unset(); } ?>
+                <h1 class="h3 mb-3 font-weight-normal">Ingrese el codigo de acceso</h1>
+                <input class="form-control" type="password" name="cod" placeholder="Ingrese el codigo aqui...">
+                <br>
+                <button class="btn btn-lg btn-success btn-block" name="ingresarcod" type="submit">Ingresar</button>
             </form>
         </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
