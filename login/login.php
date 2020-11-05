@@ -27,7 +27,7 @@ if (isset($_POST['ingresar'])) {
     <title>Iniciar Sesion</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <nav class="navbar navbar-dark bg-primary">
+    <nav class="navbar navbar-dark bg-dark" style="background-color: #e3f2fd;">
         <a class="navbar-brand" href="../index.php">AD Conjuntos Residenciales</a>
     </nav>
     <style>
@@ -76,9 +76,9 @@ if (isset($_POST['ingresar'])) {
                 <input type="text" id="usuario" class="form-control" placeholder="Usuario" required autofocus>
                 <label for="contrasena" class="sr-only">Password</label>
                 <input type="password" id="contrasena" class="form-control" placeholder="Contraseña" required>
-                <button class="btn btn-lg btn-success btn-block" name="ingresar" type="submit">Ingresar</button>
+                <button class="btn btn-lg btn-primary btn-block" name="ingresar" type="submit">Ingresar</button>
                 <br>
-                <a href="../login/registroInquilino.php" class="btn btn-lg btn-primary btn-block">Registrarme</a>
+                <a href="../paso.php" class="btn btn-lg btn-success btn-block">Registrarme</a>
             </form>
         </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

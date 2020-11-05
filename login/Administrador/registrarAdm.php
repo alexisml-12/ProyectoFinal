@@ -1,5 +1,5 @@
 <?php
-include("../db.php");
+include("../../db.php");
 if(isset($_POST['registrar'])){
     if(strlen($_POST['nombre']) >= 1 &&
        strlen($_POST['apellido']) >= 1 &&
