@@ -15,7 +15,7 @@ if(isset($_POST['registrar'])){
                 ('$nombre','$apellido','$telefono','$usuario','$contraseña')";
            $resultado = mysqli_query($conn,$consulta);
            if($resultado){
-            header("Location:interfazAdm.php");
+            header("Location:../login.php");
            }else{
             ?>
              <div class="alert alert-danger" role="alert">

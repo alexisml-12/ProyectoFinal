@@ -12,6 +12,6 @@
   <a class="navbar-brand" href="../../index.php">AD Conjuntos Residenciales</a>
   <form class="form-inline">
     <a class="navbar-brand" href="">Soporte</a>
-    <a class="navbar-brand" href="../login.php">Cerrar sesion</a>
+    <a class="navbar-brand" href="../../index.php">Cerrar sesion</a>
   </form>
 </nav>
