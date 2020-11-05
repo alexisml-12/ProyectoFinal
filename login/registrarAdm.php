@@ -15,30 +15,25 @@ if(isset($_POST['registrar'])){
                 ('$nombre','$apellido','$telefono','$usuario','$contraseña')";
            $resultado = mysqli_query($conn,$consulta);
            if($resultado){
-            echo "¡Te haz registrado satisfactoriamente";
-
+               ?>
+            <div class="alert alert-primary" role="alert">
+             <?php echo "¡Se ha registrado satisfactoriamente!"?>
+            </div>
+            <?php
            }else{
-               echo "¡Ups, ha ocurrido un error!";
+            ?>
+             <div class="alert alert-danger" role="alert">
+             <?php echo "¡Ups!, algo ha ocurrido"?>
+             </div>
+             <?php
            }
 
     }else{
-        echo "Porfavor completar todos los campos con *";
+        ?>
+        <div class="alert alert-danger" role="alert">
+        <?php echo "Ingrese todos los campos con * "?>
+        </div>
+        <?php
     }
 }
-/*$nombre = $_POST['nombre'];
-$apellido = $_POST['apellido'];
-$telefono = $_POST['telefono'];
-$usuario = $_POST['usuario'];
-$contraseña = $_POST['contraseña'];
-$requeridos = strlen($nombre) * strlen($apellido) * strlen($telefono) * strlen($usuario) * strlen($contraseña);
-if ($requeridos > 0) {
-    $contraseña = md5($contraseña);
-    mysql_query("INSERT INTO administrador VALUES('', '$nombre', '$apellido', '$telefono', '$usuario', '$contraseña')");
-    echo "Se ha registrado satisfactoriamente";
-}else{
-    echo "Porfavor llene todos los campos con *";
-}*/
-
-
-
 ?>
