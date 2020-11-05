@@ -15,11 +15,7 @@ if(isset($_POST['registrar'])){
                 ('$nombre','$apellido','$telefono','$usuario','$contraseña')";
            $resultado = mysqli_query($conn,$consulta);
            if($resultado){
-               ?>
-            <div class="alert alert-primary" role="alert">
-             <?php echo "¡Se ha registrado satisfactoriamente!"?>
-            </div>
-            <?php
+            header("Location:interfazAdm.php");
            }else{
             ?>
              <div class="alert alert-danger" role="alert">
