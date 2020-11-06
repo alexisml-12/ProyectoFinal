@@ -12,12 +12,25 @@ if (isset($_POST['ingresar'])) {
         $_SESSION['mensaje'] = 'Seleccione un rol';
         $_SESSION['tipo_mensaje'] = 'danger';
     }elseif ($selec==0) {
-      $consulta= "SELECT * FROM administrador WHERE usuario='$usuario' AND contraseña='$clave'";
-      $query= mysqli_query($conn,$consulta);
-      $result = mysqli_num_rows($query);
+      $query = "SELECT COUNT(*) AS contar FROM administrador WHERE usuario ='$usuario' AND contraseña = '$clave'";
+      $consulta = mysqli_query($conn, $query);
+      $array = mysqli_fetch_array($consulta);
 
-      if ($result) {
-        header("Location: ../index.php");
+      if ($array['contar'] > 0) {
+        $_SESSION['username'] = $usuario;
+        header("Location: ../login/Administrador/interfazAdm.php");
+      }else {
+        $_SESSION['mensaje'] = 'Usuario o contraseña incorrectos';
+        $_SESSION['tipo_mensaje'] = 'danger';
+      }
+    }elseif ($selec == 1) {
+      $query = "SELECT COUNT(*) AS contar FROM portero WHERE usuario ='$usuario' AND contraseña = '$clave'";
+      $consulta = mysqli_query($conn, $query);
+      $array = mysqli_fetch_array($consulta);
+
+      if ($array['contar'] > 0) {
+        $_SESSION['username'] = $usuario;
+        header("Location: ../login/Administrador/interfazAdm.php");
       }else {
         $_SESSION['mensaje'] = 'Usuario o contraseña incorrectos';
         $_SESSION['tipo_mensaje'] = 'danger';
@@ -67,7 +80,7 @@ if (isset($_POST['ingresar'])) {
   <br>  
     <body class="text-center">
         <div class="container">
-            <form action="login.php" method="POST" class="form-signin">
+            <form action="../login/login.php" method="POST" class="form-signin">
             <?php if(isset($_SESSION['mensaje'])){ ?>
             <div class="alert alert-<?= $_SESSION['tipo_mensaje']; ?> alert-dismissible fade show" role="alert">
                 <?= $_SESSION['mensaje'] ?>

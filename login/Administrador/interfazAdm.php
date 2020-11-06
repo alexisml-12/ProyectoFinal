@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+
+$usuario = $_SESSION['username'];
+
+if (!isset($usuario)) {
+  header("Location: ../../index.php");
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +25,13 @@
   <a class="navbar-brand" href="../../index.php">AD Conjuntos Residenciales</a>
   <form class="form-inline">
     <a class="navbar-brand" href="">Soporte</a>
-    <a class="navbar-brand" href="../../index.php">Cerrar sesion</a>
+    <a class="navbar-brand" href="logoutadmn.php">Cerrar sesion</a>
   </form>
 </nav>
+<h2>Bienvenuto <?php echo $usuario; ?></h2>
+
+
+
+
+</body>
+</html>
