@@ -1,23 +1,3 @@
-<?php require "db.php";
-
-if (isset($_SESSION['id'])) {
-    $records = $conn->prepare('SELECT usuario, contraseña FROM administrador WHERE id=:id');
-    $records->bindParam(':id', $_SESSION['id']);
-    $records->execute();
-    $results = $records->fetch(PDO::FETCH_ASSOC);
-
-    $user = null;
-
-    if (count($results) > 0) {
-      $user = $results;
-    }
-  }
-
-
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

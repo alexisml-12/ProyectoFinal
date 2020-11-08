@@ -25,7 +25,7 @@ if (!isset($usuario)) {
 <body>
 
 <nav class="navbar navbar-dark bg-dark" style="background-color: #e3f2fd;">
-  <a class="navbar-brand" href="../../index.php">AD Conjuntos Residenciales</a>
+  <a class="navbar-brand" href="">AD Conjuntos Residenciales</a>
   <form class="form-inline">
     <a class="navbar-brand" href="">Soporte</a>
     <a class="navbar-brand" href="logoutadmn.php">Cerrar sesion</a>
@@ -47,7 +47,7 @@ if (!isset($usuario)) {
               <a href="consultainquilino.php"><h6>Consultar informacion de los inquilinos</h6></a>
             </li>
             <li>
-              <a href=""><h6>Consultar informacion de los propietarrios</h6></a>
+              <a href="consultapropietario.php"><h6>Consultar informacion de los propietarios</h6></a>
             </li>
           </ul>
         </li>

@@ -4,7 +4,7 @@ require "../../db.php";
 
 if(isset($_GET['cedula'])){
     $cedula = $_GET['cedula'];
-    $query = "DELETE FROM inquilino WHERE cedula = $cedula";
+    $query = "DELETE FROM propietario WHERE cedula = $cedula";
     $result = mysqli_query($conn, $query);
     if(!$result){
         die('Fallo la consulta');
@@ -13,7 +13,7 @@ if(isset($_GET['cedula'])){
     $_SESSION['mensaje'] = "Eliminado Correctamente";
     $_SESSION['tipo_mensaje'] = "danger";
 
-    header("Location: consultainquilino.php");
+    header("Location: consultapropietario.php");
 
 }
 

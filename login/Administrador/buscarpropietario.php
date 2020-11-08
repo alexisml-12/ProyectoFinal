@@ -3,11 +3,11 @@
     require "../../db.php";
 
     $salida = "";
-    $query = "SELECT * FROM inquilino WHERE nombre NOT LIKE '' ORDER By cedula LIMIT 25";
+    $query = "SELECT * FROM propietario WHERE nombre NOT LIKE '' ORDER By cedula LIMIT 25";
 
     if (isset($_POST['consulta'])) {
         $q = $conn->real_escape_string($_POST['consulta']);
-        $query = "SELECT * FROM inquilino WHERE cedula LIKE '%$q%' OR nombre LIKE '%$q%' OR apellido LIKE '%$q%' OR telefono LIKE '%$q%' OR n_inquilinos LIKE '%$q%' OR usuario LIKE '%$q%'";
+        $query = "SELECT * FROM propietario WHERE cedula LIKE '%$q%' OR nombre LIKE '%$q%' OR apellido LIKE '%$q%' OR telefono LIKE '%$q%' OR usuario LIKE '%$q%'";
     }
 
 
@@ -21,8 +21,7 @@
                 <td>Cedula</td>
                 <td>Nombres</td>
                 <td>Apellidos</td>
-                <td>telefono</td>
-                <td>Numero de inquilinos</td>
+                <td>Telefono</td>
                 <td>Usuario</td>
                 <td>Acciones</td>
             </tr>
@@ -30,14 +29,13 @@
     <tbody>";
 
     while ($fila=$result->fetch_assoc()) {
-            $eliminar = "<a href='eliminarinq.php?cedula=".$fila['cedula']."'class='btn btn-danger'><i class='fas fa-trash-alt'></i></a></a>";
-            $editar = "<a href='editarinq.php?cedula=".$fila['cedula']."'class='btn btn-info'><i class='fas fa-marker'></i></a></a>";
+        $eliminar = "<a href='eliminarprop.php?cedula=".$fila['cedula']."'class='btn btn-danger'><i class='fas fa-trash-alt'></i></a></a>";
+        $editar = "<a href='editarprop.php?cedula=".$fila['cedula']."'class='btn btn-info'><i class='fas fa-marker'></i></a></a>";
             $salida.="<tr>
             <td>".$fila['cedula']."</td>
             <td>".$fila['nombre']."</td>
             <td>".$fila['apellido']."</td>
             <td>".$fila['telefono']."</td>
-            <td>".$fila['n_inquilinos']."</td>
             <td>".$fila['usuario']."</td>
             <td>".$editar." ".$eliminar."</td>
             </tr>";
