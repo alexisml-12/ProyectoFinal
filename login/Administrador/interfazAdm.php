@@ -53,8 +53,8 @@ if (!isset($usuario)) {
         </li>
       </ul>
       <ul style="float:right;">
-     <li><a style="color:#1C2833;" href=""><h5>Consultar informacion del personal de trabajo⠀⠀<span class="icon-down-open"></h5></a></span>
-        </li>
+     <li><a style="color:#1C2833;" href="consultapersonal.php"><h5>Consultar informacion del personal de trabajo⠀⠀<span class="icon-down-open"></h5></a></span>
+     </li>
     </ul>
 </div>
 <br><br><br><br><br><br>
