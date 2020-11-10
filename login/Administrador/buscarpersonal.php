@@ -7,7 +7,7 @@
 
     if (isset($_POST['consulta'])) {
         $q = $conn->real_escape_string($_POST['consulta']);
-        $query = "SELECT * FROM personal_de_trabajo WHERE id LIKE '%$q%' OR nombre LIKE '%$q%' OR cargo LIKE '%$q%'";
+        $query = "SELECT * FROM personal_de_trabajo WHERE id LIKE '%$q%' OR nombre LIKE '%$q%' OR apellido LIKE '%$q%' OR cargo LIKE '%$q%'";
     }
 
 
