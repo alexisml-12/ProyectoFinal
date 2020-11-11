@@ -76,7 +76,7 @@ if (!isset($usuario)) {
       </ul>
     <ul style="float:right;">
       <li>
-      <a style="color:#1C2833;" href=""><h5>Consultar la informacion del parqueadero⠀⠀⠀⠀⠀<span class="icon-down-open"></h5></a></span>
+      <a style="color:#1C2833;" href="consultaparq.php"><h5>Consultar la informacion del parqueadero⠀⠀⠀⠀⠀<span class="icon-down-open"></h5></a></span>
       </li>
     </ul>
 </div>

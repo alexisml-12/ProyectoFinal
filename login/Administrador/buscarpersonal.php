@@ -18,6 +18,7 @@
         $salida.="<table border=1 class='table table-dark'>
         <thead>
             <tr id='titulo'>
+                <td>ID</td>
                 <td>Nombres</td>
                 <td>Apellidos</td>
                 <td>Cargo</td>

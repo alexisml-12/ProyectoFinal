@@ -4,7 +4,7 @@ require "../../db.php";
 
 if(isset($_GET['id'])){
     $id = $_GET['id'];
-    $query = "DELETE FROM personal_de_trabajo WHERE id = $id";
+    $query = "DELETE FROM parqueadero WHERE id = $id";
     $result = mysqli_query($conn, $query);
     if(!$result){
         die('Fallo la consulta');
@@ -13,8 +13,7 @@ if(isset($_GET['id'])){
     $_SESSION['mensaje'] = "Eliminado Correctamente";
     $_SESSION['tipo_mensaje'] = "danger";
 
-    header("Location: consultapersonal.php");
+    header("Location: consultaparq.php");
 
 }
-
 ?>
