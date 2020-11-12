@@ -1,6 +1,13 @@
 <?php 
 
-    require "../../db.php";
+    include("../../db.php");
+    // $usuario = $_SESSION['username'];
+    // if (!isset($usuario)) {
+    //     //   header("Location: ../../index.php");
+    //     echo "no esta;";
+    //     }else {
+    //       echo "hola";
+    //     }
 
     $salida = "";
     $query = "SELECT * FROM inquilino WHERE nombre NOT LIKE '' ORDER By cedula LIMIT 25";
@@ -51,6 +58,6 @@
 
     echo $salida;
 
-    $conn->close();
+    // $conn->close();
 
 ?>

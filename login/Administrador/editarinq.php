@@ -1,6 +1,12 @@
 <?php
 require "../../db.php";
 
+$usuario = $_SESSION['username'];
+
+if (!isset($usuario)) {
+  header("Location: ../../index.php");
+}
+
 if(isset($_GET['cedula'])){
     $cedula = $_GET['cedula'];
     $query = "SELECT * FROM inquilino WHERE cedula=$cedula";
@@ -19,6 +25,7 @@ if(isset($_GET['cedula'])){
 }
 
 if(isset($_POST['actualizar'])){
+    $usuario2 = $_SESSION['username'];
     $cedula = $_GET['cedula'];
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];

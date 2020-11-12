@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+// require "../../db.php"; 
 
 $usuario = $_SESSION['username'];
 
@@ -63,7 +64,7 @@ if (!isset($usuario)) {
      <li class="submenu"><h5>Ver apartamentos<span class="icon-down-open"></h5></span>
           <ul>
             <li>
-              <a href=""><h6>A la venta</h6></a>
+              <a href="apteventa.php"><h6>A la venta</h6></a>
             </li>
             <li>
               <a href=""><h6>Para alquilar</h6></a>

@@ -1,5 +1,16 @@
 
-<?php include("../../db.php"); ?>
+<?php include("../../db.php"); 
+
+// session_start();
+
+$usuario = $_SESSION['username'];
+
+if (!isset($usuario)) {
+//   header("Location: ../../index.php");
+
+}
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -8,7 +19,7 @@
     <script src="https://kit.fontawesome.com/80f657c685.js" crossorigin="anonymous"></script>
 	<title>Consultar Inquilino</title>
     <nav class="navbar navbar-dark bg-dark" style="background-color: #e3f2fd;">
-    <a class="navbar-brand" href="interfazAdm.php">AD Conjuntos Residenciales</a>
+    <a class="navbar-brand" href="../Administrador/interfazAdm.php">AD Conjuntos Residenciales</a>
     <form class="form-inline">
         <a class="navbar-brand" href="">Soporte</a>
         <a class="navbar-brand" href="logoutadmn.php">Cerrar sesion</a>
