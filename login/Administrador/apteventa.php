@@ -26,6 +26,8 @@ require "../../db.php";
 <br>
 <br>
 <div class="container">
+<h4 class="text-center">Apartamentos a la venta</h4>
+<br>
     <div class="row">
     <!--  -->
     <?php 
@@ -35,7 +37,7 @@ require "../../db.php";
         while($fila = mysqli_fetch_array($result)){?>
         <div class="col-sm-6">
             <div class="card">
-            <img class="card-img-top" src="<?php echo $fila['imagen'];?>" alt="Card image cap">
+            <?php echo '<img class="card-img-top" src="data:image/jpeg;base64,'.base64_encode($fila["imagen"]).'" alt="Card image cap" />';?>
             <div class="card-body">
                 <h5 class="card-title"><?php echo $fila['titulo'];?></h5>
                 <p class="card-text"><?php echo $fila['descripcion'];?></p>
