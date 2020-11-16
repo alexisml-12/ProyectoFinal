@@ -67,7 +67,7 @@ if (!isset($usuario)) {
               <a href="apteventa.php"><h6>A la venta</h6></a>
             </li>
             <li>
-              <a href=""><h6>Para alquilar</h6></a>
+              <a href="aptearrendar.php"><h6>Para alquilar</h6></a>
             </li>
             <li>
               <a href=""><h6>Arrendados</h6></a>

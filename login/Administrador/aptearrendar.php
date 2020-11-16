@@ -9,7 +9,7 @@ require "../../db.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/bootstrap.css">
-    <title>Apartamentos a la venta</title>
+    <title>Apartamentos en arrendamiento</title>
     <style type="text/css">
     
     </style>
@@ -26,12 +26,12 @@ require "../../db.php";
 <br>
 <br>
 <div class="container">
-<h4 class="text-center">Apartamentos a la venta</h4>
+<h4 class="text-center">Apartamentos en arrendamiento</h4>
 <br>
     <div class="row">
     <!--  -->
     <?php 
-        $query = "SELECT * FROM `apartamentos` WHERE estado='venta' LIMIT 0, 25";
+        $query = "SELECT * FROM `apartamentos` WHERE estado='arrendar' LIMIT 0, 25";
         $result = mysqli_query($conn, $query);
 
         while($fila = mysqli_fetch_array($result)){?>
