@@ -70,7 +70,7 @@ if (!isset($usuario)) {
               <a href="aptearrendar.php"><h6>Para alquilar</h6></a>
             </li>
             <li>
-              <a href=""><h6>Arrendados</h6></a>
+              <a href="aptearrendado.php"><h6>Arrendados</h6></a>
             </li>
           </ul>
         </li>

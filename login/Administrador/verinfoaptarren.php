@@ -25,6 +25,7 @@
           $descripcion = $fila['descripcion'];
           $propietario = $fila['propietario'];
           $inquilino = $fila['inquilino'];
+          
 
           if (isset($propietario)) {
             $query2 = "SELECT * FROM propietario WHERE cedula=$propietario";
@@ -34,6 +35,15 @@
               $tel = $fila2['telefono'];
               $nom = $fila2['nombre'];
               $ap = $fila2['apellido'];
+            }
+          }
+          if (isset($inquilino)) {
+            $query3 = "SELECT * FROM inquilino WHERE cedula=$inquilino";
+            $result3 = mysqli_query($conn, $query3);
+            if(mysqli_num_rows($result3) == 1) { //mysqli_num_rows PARA COMPROBAR CUANTA FILAS TIEN EL RESULTADO
+              $fila3 = mysqli_fetch_array($result3);
+              $nomb = $fila3['nombre'];
+              $ape = $fila3['apellido'];
             }
           }
       } 
@@ -77,6 +87,12 @@
       </div>
     </div>
     <div class="form-group row">
+      <h6 class="col-sm-2 col-form-label">Inquilino:</h6>
+      <div class="col-sm-9">
+        <input type="text" readonly class="form-control" id="staticEmail" value="<?php echo $nomb." ".$ape?>">
+      </div>
+      </div>
+    <div class="form-group row">
       <h6 class="col-sm-2 col-form-label">Cuartos:</h6>
       <div class="col-sm-9">
         <input type="text" readonly class="form-control" value="<?php echo $cuartos?>">
@@ -97,7 +113,7 @@
     <div class="form-group row">
       <h6 class="col-sm-2 col-form-label">Descripcion:</h6>
       <div class="col-sm-9">
-      <textarea readonly class="form-control" rows="3"><?php echo $descripcion?></textarea>
+      <input type="text" readonly class="form-control" value="<?php echo $descripcion?>">
       <!-- <br>
       <center><a href="verinfoapt.php?id=" class="btn btn-primary">Ver informacion del propietario</a></center> -->
       </div>
@@ -106,15 +122,11 @@
       <h6 class="col-sm-2 col-form-label">Propietario:</h6>
       <div class="col-sm-9">
         <input type="text" readonly class="form-control" value="<?php echo $nom." ".$ap?>">
+        <br>
+        <center><a href="consultainquilino.php" class="btn btn-primary">Ver informacion del inquilino</a></center> 
       </div>
     </div>
-    <div class="form-group row">
-      <h6 class="col-sm-2 col-form-label">Tel Propietario:</h6>
-      <div class="col-sm-9">
-      <br>
-        <input type="text" readonly class="form-control" value="<?php echo $tel?>">
-      </div>
-    </div>
+    
   </form>
 </div>
 
