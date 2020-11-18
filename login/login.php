@@ -30,7 +30,7 @@ if (isset($_POST['ingresar'])) {
 
       if ($array['contar'] > 0) {
         $_SESSION['username'] = $usuario;
-        header("Location: ../login/Administrador/interfazAdm.php");
+        header("Location: ../login/Portero/interfazport.php");
       }else {
         $_SESSION['mensaje'] = 'Usuario o contraseña incorrectos';
         $_SESSION['tipo_mensaje'] = 'danger';
@@ -80,7 +80,7 @@ if (isset($_POST['ingresar'])) {
   <br>  
     <body class="text-center">
         <div class="container">
-            <form action="../login/login.php" method="POST" class="form-signin">
+            <form action="login.php" method="POST" class="form-signin">
             <?php if(isset($_SESSION['mensaje'])){ ?>
             <div class="alert alert-<?= $_SESSION['tipo_mensaje']; ?> alert-dismissible fade show" role="alert">
                 <?= $_SESSION['mensaje'] ?>
