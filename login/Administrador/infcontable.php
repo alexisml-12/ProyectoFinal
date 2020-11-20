@@ -18,6 +18,7 @@
     <a class="navbar-brand" href="logoutadmn.php">Cerrar sesion</a>
   </form>
 </nav>
+<<<<<<< HEAD
 
 <div class="container" style="margin-top: 60px;">
 
@@ -41,6 +42,21 @@
                         <div class="col-lg-10">
                          <input type="file" id="txt_archivo" class="form-control" accept=".xlsx">
                         </div>
+=======
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+       <div class="card">
+       <div class="card-header" style="background-color: #8D847F;">
+       <b>Importar excel</b>
+       </div>
+       <div class="card-body">
+            <div class="row">      
+                <div class="col-lg-10">
+                    <input type="file" id="txt_archivo" class="form-control" accept=".xlsx">
+                </div>
+>>>>>>> 89ba97c89e016e6424649e575189675ae4cf5f35
 
                           <div class="col-lg-2">
                             <button class="btn btn-danger">Cargar excel</button>

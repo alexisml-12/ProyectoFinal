@@ -1,12 +1,19 @@
 <?php
 
-session_start();
-// require "../../db.php"; 
+
+require "../../db.php"; 
 
 $usuario = $_SESSION['username'];
 
 if (!isset($usuario)) {
   header("Location: ../../index.php");
+}
+
+$query = "SELECT * FROM `portero` WHERE usuario='$usuario' LIMIT 0, 25";
+$result = mysqli_query($conn, $query);
+
+if ($fila = mysqli_fetch_array($result)) {
+  $id = $fila['id'];
 }
 
 ?>
@@ -62,7 +69,7 @@ if (!isset($usuario)) {
 <div class="container">
 <ul style="float:left;">
     <li>
-      <a style="color:#1C2833;" href="minuta.php"><h5>Minuta<span class="icon-down-open"></h5></a></span>   
+      <a style="color:#1C2833;" href="minuta.php?id=<?php echo $fila['id']?>"><h5>Minuta<span class="icon-down-open"></h5></a></span>   
     </li>
     </ul>
 </div>
