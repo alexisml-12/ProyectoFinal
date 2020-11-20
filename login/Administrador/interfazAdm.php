@@ -85,7 +85,7 @@ if (!isset($usuario)) {
 <div class="container">
 <ul style="float:left;">
     <li>
-      <a style="color:#1C2833;" href=""><h5>Consultar informacion contable<span class="icon-down-open"></h5></a></span>   
+      <a style="color:#1C2833;" href="infcontable.php"><h5>Consultar informacion contable<span class="icon-down-open"></h5></a></span>   
     </li>
     </ul>
 </div>

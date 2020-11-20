@@ -14,7 +14,7 @@
     <a class="navbar-brand" href="logoutadmn.php">Cerrar sesion</a>
   </form>
 </nav>
-
+<br>
 <div class="container">
   <div class="row">
     <div class="col-lg-12">

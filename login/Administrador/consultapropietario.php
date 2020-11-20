@@ -26,7 +26,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div></center>
-            <?php session_unset(); } ?>
+            <?php  } ?>
     <br>
 	<h1>Buscar Propietario</h1>
     <br>
