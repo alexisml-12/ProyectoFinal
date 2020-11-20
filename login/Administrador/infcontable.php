@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="../../css/bootstrap.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>Inf contable</title>
     <style type="text/css">
     
@@ -18,18 +22,22 @@
     <a class="navbar-brand" href="logoutadmn.php">Cerrar sesion</a>
   </form>
 </nav>
-<<<<<<< HEAD
+<br>
+<!-- Nav pills -->
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="pill" href="#home">Libro Diario</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="pill" href="#menu1">Libro Mayor</a>
+  </li>
+</ul>
 
-<div class="container" style="margin-top: 60px;">
-
-  <ul class="nav nav-tabs">
-    <li class="active"><a href="#libdiario" data-toggle="tab">Libro diario</a></li>
-    <li><a href="#libmayor" data-toggle="tab">Libro mayor</a></li>
-  </ul>
-
-  <div class="tab-content">
-  <div class="tab-pane fade" id="libdiario">
-    <div class="container">
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane container active" id="home">
+  <br>
+  <div class="container">
         <div class="row">
           <div class="col-lg-12">
             <div class="card">
@@ -42,22 +50,6 @@
                         <div class="col-lg-10">
                          <input type="file" id="txt_archivo" class="form-control" accept=".xlsx">
                         </div>
-=======
-<br>
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-       <div class="card">
-       <div class="card-header" style="background-color: #8D847F;">
-       <b>Importar excel</b>
-       </div>
-       <div class="card-body">
-            <div class="row">      
-                <div class="col-lg-10">
-                    <input type="file" id="txt_archivo" class="form-control" accept=".xlsx">
-                </div>
->>>>>>> 89ba97c89e016e6424649e575189675ae4cf5f35
-
                           <div class="col-lg-2">
                             <button class="btn btn-danger">Cargar excel</button>
                           </div>  
@@ -67,10 +59,13 @@
           </div>
       </div>
   </div>
-    <div class="tab-pane fade" id="libmayor"></div>
+  </div>
+
+
+  <div class="tab-pane container fade" id="menu1">
+    aqui va el libro mayor
   </div>
 </div>
-
 
 
 
