@@ -3,11 +3,11 @@
     require "../../db.php";
 
     $salida = "";
-    $query = "SELECT * FROM propietario WHERE nombre NOT LIKE '' ORDER By cedula LIMIT 25";
+    $query = "SELECT * FROM personal_de_trabajo WHERE nombre NOT LIKE '' ORDER By id LIMIT 25";
 
     if (isset($_POST['consulta'])) {
         $q = $conn->real_escape_string($_POST['consulta']);
-        $query = "SELECT * FROM propietario WHERE cedula LIKE '%$q%' OR nombre LIKE '%$q%' OR apellido LIKE '%$q%' OR telefono LIKE '%$q%' OR usuario LIKE '%$q%'";
+        $query = "SELECT * FROM personal_de_trabajo WHERE id LIKE '%$q%' OR nombre LIKE '%$q%' OR apellido LIKE '%$q%' OR cargo LIKE '%$q%'";
     }
 
 
@@ -18,22 +18,20 @@
         $salida.="<table border=1 class='table table-dark'>
         <thead>
             <tr id='titulo'>
-                <td>Cedula</td>
+                <td>ID</td>
                 <td>Nombres</td>
                 <td>Apellidos</td>
-                <td>Telefono</td>
-                <td>Usuario</td>
+                <td>Cargo</td>
             </tr>
         </thead>
     <tbody>";
 
     while ($fila=$result->fetch_assoc()) {
             $salida.="<tr>
-            <td>".$fila['cedula']."</td>
+            <td>".$fila['id']."</td>
             <td>".$fila['nombre']."</td>
             <td>".$fila['apellido']."</td>
-            <td>".$fila['telefono']."</td>
-            <td>".$fila['usuario']."</td>
+            <td>".$fila['cargo']."</td>
             </tr>";
         }
 

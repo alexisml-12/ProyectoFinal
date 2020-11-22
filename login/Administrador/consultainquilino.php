@@ -1,16 +1,5 @@
 
-<?php include("../../db.php"); 
 
-// session_start();
-
-$usuario = $_SESSION['username'];
-
-if (!isset($usuario)) {
-  header("Location: ../../index.php");
-
-}
-
-?>
 
 <!DOCTYPE html>
 <html>
@@ -39,7 +28,19 @@ if (!isset($usuario)) {
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div></center>
-            <?php  } ?>
+            <?php session_unset();} ?>
+            <?php include("../../db.php"); 
+
+            // session_start();
+
+            $usuario = $_SESSION['username'];
+
+            if (!isset($usuario)) {
+            header("Location: ../../index.php");
+
+            }
+
+            ?>
 	<h1>Buscar Inquilino</h1>
     <br>
 	<div class="formulario">

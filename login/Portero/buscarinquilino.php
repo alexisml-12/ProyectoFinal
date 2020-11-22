@@ -1,13 +1,6 @@
 <?php 
 
     include("../../db.php");
-    // $usuario = $_SESSION['username'];
-    // if (!isset($usuario)) {
-    //     //   header("Location: ../../index.php");
-    //     echo "no esta;";
-    //     }else {
-    //       echo "hola";
-    //     }
 
     $salida = "";
     $query = "SELECT * FROM inquilino WHERE nombre NOT LIKE '' ORDER By cedula LIMIT 25";
@@ -31,14 +24,11 @@
                 <td>telefono</td>
                 <td>Numero de inquilinos</td>
                 <td>Usuario</td>
-                <td>Acciones</td>
             </tr>
         </thead>
     <tbody>";
 
     while ($fila=$result->fetch_assoc()) {
-            $eliminar = "<a href='eliminarinq.php?cedula=".$fila['cedula']."'class='btn btn-danger'><i class='fas fa-trash-alt'></i></a></a>";
-            $editar = "<a href='editarinq.php?cedula=".$fila['cedula']."'class='btn btn-info'><i class='fas fa-marker'></i></a></a>";
             $salida.="<tr>
             <td>".$fila['cedula']."</td>
             <td>".$fila['nombre']."</td>
@@ -46,7 +36,6 @@
             <td>".$fila['telefono']."</td>
             <td>".$fila['n_inquilinos']."</td>
             <td>".$fila['usuario']."</td>
-            <td>".$editar." ".$eliminar."</td>
             </tr>";
         }
 
@@ -58,6 +47,6 @@
 
     echo $salida;
 
-    // $conn->close();
+    $conn->close();
 
 ?>

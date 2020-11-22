@@ -1,4 +1,4 @@
-<?php include("../../db.php"); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,6 +27,18 @@
                 </button>
             </div></center>
             <?php session_unset(); } ?>
+            <?php include("../../db.php"); 
+
+            // session_start();
+
+            $usuario = $_SESSION['username'];
+
+            if (!isset($usuario)) {
+            header("Location: ../../index.php");
+
+            }
+
+            ?>
     <br>
 	<h1>Buscar Personal De Trabajo</h1>
     <br>

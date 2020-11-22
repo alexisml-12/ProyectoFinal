@@ -70,6 +70,11 @@ if ($fila = mysqli_fetch_array($result)) {
 <ul style="float:left;">
     <li>
       <a style="color:#1C2833;" href="minuta.php?id=<?php echo $fila['id']?>"><h5>Minuta<span class="icon-down-open"></h5></a></span>   
+      <ul>
+            <li>
+              <a href="registromin.php?id=<?php echo $id?>"><h6>Ingresar al registro de minutas</h6></a>
+            </li>
+          </ul>
     </li>
     </ul>
 </div>

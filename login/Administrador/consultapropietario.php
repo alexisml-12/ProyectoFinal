@@ -1,4 +1,4 @@
-<?php include("../../db.php"); ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +26,19 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div></center>
-            <?php  } ?>
+            <?php session_unset(); } ?>
+            <?php include("../../db.php"); 
+
+            // session_start();
+
+            $usuario = $_SESSION['username'];
+
+            if (!isset($usuario)) {
+            header("Location: ../../index.php");
+
+            }
+
+            ?>
     <br>
 	<h1>Buscar Propietario</h1>
     <br>

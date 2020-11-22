@@ -18,29 +18,29 @@
                 $apellido = $fila['apellido'];
             }
     }
-    $hora=date('Y/m/d H:i:s');
-
+    $hora=date('Y-m-d\TH:i');
+    // echo $hora;
     if(isset($_POST['guardar'])){
         // $nombrep = $_POST['portero'];
         // $apellidop = $_POST['']
         $portero = $_POST['portero'];
         $ingresov= $_POST['ingresov'];
         $inicio = strtotime($ingresov);
-        $inicio = date('Y-m-d h:i:s',$inicio);
+        $inicio = Date('Y-m-d\TH:i',$inicio);
         // echo $inicio;
         // echo $ingresov;
         // $ingresovehi = date('Y/m/d H:i:s', $ingresov);
         $salidav= $_POST['salidav'];
         $inicio2 = strtotime($salidav);
-        $inicio2 = date('Y-m-d h:i:s',$inicio2);
+        $inicio2 = date('Y-m-d\TH:i',$inicio2);
         // $salidavehi = date('Y/m/d H:i:s', $salidav);
         $ingresop= $_POST['ingresop'];
         $inicio3 = strtotime($ingresop);
-        $inicio3 = date('Y-m-d h:i:s',$inicio3);
+        $inicio3 = date('Y-m-d\TH:i',$inicio3);
         // $ingresoper = date('Y/m/d H:i:s', $ingresop);
         $salidap= $_POST['salidap'];
         $inicio4 = strtotime($salidap);
-        $inicio4 = date('Y-m-d h:i:s',$inicio4);
+        $inicio4 = date('Y-m-d\TH:i',$inicio4);
         // $salidaper = date('Y/m/d H:i:s', $salidap);
         $inventario=$_POST['inventario'];
         $notas = $_POST['notas'];
@@ -99,7 +99,7 @@
             </div>
             <div class="col-sm-6">
                 <h5>Ingreso de vehiculos</h5>
-                <input type="datetime-local" name="ingresov" step="1"  class="form-control">
+                <input type="datetime-local" name="ingresov" step="1" value="0000-00-00 00:00:00" class="form-control">
                 <br>
             </div>
             <div class="col-sm-6">
@@ -132,7 +132,6 @@
     </div>
     <div class="col-sm-6"><center>
             <input type="submit" name="guardar" class="btn btn-success" value="Guardar registro">
-            <a href="registromin.php" class="btn btn-primary">Ingresar al registro de minutas</a>
             </center>
     </form>
 </body>
