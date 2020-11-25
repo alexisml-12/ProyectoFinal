@@ -35,6 +35,18 @@ if (isset($_POST['ingresar'])) {
         $_SESSION['mensaje'] = 'Usuario o contraseña incorrectos';
         $_SESSION['tipo_mensaje'] = 'danger';
       }
+    }elseif ($selec == 3) {
+      $query = "SELECT COUNT(*) AS contar FROM inquilino WHERE usuario ='$usuario' AND contraseña = '$clave'";
+      $consulta = mysqli_query($conn, $query);
+      $array = mysqli_fetch_array($consulta);
+
+      if ($array['contar'] > 0) {
+        $_SESSION['username'] = $usuario;
+        header("Location: ../login/Inquilino/interfazinq.php");
+      }else {
+        $_SESSION['mensaje'] = 'Usuario o contraseña incorrectos';
+        $_SESSION['tipo_mensaje'] = 'danger';
+      }
     }
     
 }
