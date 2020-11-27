@@ -57,7 +57,7 @@ if ($fila = mysqli_fetch_array($result)) {
         </li>
       </ul>
       <ul style="float:right;">
-     <li style="margin-rigth:-30px;"><a style="color:#1C2833;" href="consultapersonal.php"><h5>Pagar arrendamiento⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<span class="icon-down-open"></h5></a></span>
+     <li style="margin-rigth:-30px;"><a style="color:#1C2833;" href="pagararren.php"><h5>Pagar arrendamiento⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<span class="icon-down-open"></h5></a></span>
      </li>
     </ul>
 </div>
@@ -81,14 +81,7 @@ if ($fila = mysqli_fetch_array($result)) {
       </li>
     </ul>
 </div>
-<br><br><br><br><br><br>
-<div class="container">
-<ul style="float:left;">
-    <li>
-      <a style="color:#1C2833;" href="infcontable.php"><h5>Consultar informacion contable<span class="icon-down-open"></h5></a></span>   
-    </li>
-    </ul>
-</div>
+
 
 </body>
 </html>

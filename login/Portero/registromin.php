@@ -45,7 +45,7 @@
                 }
 
                 ?>
-	<h1>Buscar Inquilino</h1>
+	<h1>Buscar Registro de Minuta</h1>
     <br>
 	<div class="formulario">
 		<label for="caja_busqueda">Buscar:</label>
