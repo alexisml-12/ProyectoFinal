@@ -77,7 +77,7 @@ if ($fila = mysqli_fetch_array($result)) {
       </ul>
     <ul style="float:right;">
       <li>
-      <a style="color:#1C2833;" href="consultaparq.php"><h5>Reservar Salón⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<span class="icon-down-open"></h5></a></span>
+      <a style="color:#1C2833;" href="salon.php?cedula=<?php echo $cedula?>"><h5>Reservar Salón⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<span class="icon-down-open"></h5></a></span>
       </li>
     </ul>
 </div>
