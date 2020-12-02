@@ -104,9 +104,9 @@
                 <br>
             </div>
             <div class="col-sm-6">
-                <h5>Fecha de entrega de salon...</h5>
+                <h5>Ver fechas de entrega</h5>
                 <select id="lista" name="entrega" class="form-control">
-                    <option selected>Ver fechas de entrega</option>
+                    <option selected>Fecha de entrega de salon...</option>
                     <option value="11/12/2020">11/12/2020</option>
                     <option value="12/12/2020">12/12/2020</option>
                     <!-- <option value="12/12/2020">12/12/2020</option> -->

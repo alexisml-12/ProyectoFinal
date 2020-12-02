@@ -106,7 +106,6 @@ if (isset($_POST['ingresar'])) {
                     <option selected>Seleccionar Usuario...</option>
                     <option value="0">Administrador</option>
                     <option value="1">Portero</option>
-                    <option value="2">Propietario</option>
                     <option value="3">Inquilino</option>
                 </select>
                 <br>

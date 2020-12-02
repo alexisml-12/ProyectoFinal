@@ -39,7 +39,6 @@
                 <a href="login/Administrador/verificacionadm.php" class="btn btn-lg btn-danger btn-block">Administrador</a>
                 <a href="login/Portero/verificacionport.php" class="btn btn-lg btn-danger btn-block">Portero</a>
                 <a href="login/Inquilino/registroInquilino.php" class="btn btn-lg btn-danger btn-block">Inquilino</a>
-                <a href="login/Propietario/registroPropietario.php" class="btn btn-lg btn-danger btn-block">Propietario</a>
             </form>
         </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
